@@ -3,8 +3,13 @@ package F1;
 
 import java.awt.Image;
  
-import javax.swing.ImageIcon;
 
+
+import java.awt.Image;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 public class Player {
    
@@ -27,11 +32,21 @@ public class Player {
 			layer2 = 1200;
 		} else {
 			
-		}
+		
 		layer1 -= v;
 		layer2  -= v;
 		
 	}
+
+}
+public void  keyPressed(KeyEvent e){
+	JOptionPane.showMessageDialog(null,"key pressed");
+	
 }
 
+public void keyReleased(KeyEvent e){
+	JOptionPane.showMessageDialog(null,"key released");	
+}
+
+}
 
