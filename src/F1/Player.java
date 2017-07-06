@@ -6,8 +6,10 @@ import java.awt.Image;
 
 
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -18,8 +20,14 @@ public class Player {
 	public static final int MAX_BOTTOM = 720;  
 	
 	
-    Image img = new ImageIcon("res/carjneleft.png").getImage();
+    Image img = new ImageIcon("res/rival.png").getImage();
 	
+    public Rectangle getRect(){
+		return new Rectangle(x, y,150, 63);
+	}
+    
+    
+    
 	int v = 0;
 	int dv = 0;
 	int s = 0;
@@ -33,6 +41,7 @@ public class Player {
 	
 	int layer1 = 0;
 	int layer2 = 1200;
+	
 	public void move() {
 		
 		s += v;
