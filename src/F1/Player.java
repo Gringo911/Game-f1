@@ -63,6 +63,7 @@ public class Player {
 	}
 
 }
+	
 public void  keyPressed(KeyEvent e){
   int key = e.getKeyCode();
   if (key == KeyEvent.VK_RIGHT){

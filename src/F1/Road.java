@@ -1,5 +1,6 @@
 package F1;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -11,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.awt.Color;
+
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -54,6 +57,13 @@ public  class Road extends JPanel implements  ActionListener,Runnable {
 		g.drawImage(img, p.layer1, 0,null);
 		g.drawImage(img, p.layer2, 0,null);
 		g.drawImage(p.img, p.x, p.y, null);
+		
+		double v = (200/Player.MAX_V) * p.v;
+		g.setColor(Color.WHITE);
+		Font font = new Font("Arial",Font.ITALIC,20);
+		g.setFont(font);
+		g.drawString("Скорость : " + v +"км/ч", 100, 30);
+		
 		
 		Iterator<Enemy> i = enemies.iterator();
 		while(i.hasNext()){
